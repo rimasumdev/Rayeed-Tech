@@ -14,7 +14,8 @@
   }
   @media (min-width: 1024px) {
     .hero-section {
-      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+      /* clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%); */
+      clip-path: polygon(0px 0px, 100% 0px, 100% 81%, 0% 100%);
     }
     .features-section {
       clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);

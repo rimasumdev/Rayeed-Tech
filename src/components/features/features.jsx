@@ -47,12 +47,11 @@ const Features = () => {
 
   return (
     <div
-      className="w-full h-auto pt-[50px] md:pt-[100px] lg:pt-0 pb-[80px] lg:pb-[200px] features-section"
+      className="w-full h-auto pt-[20px] md:pt-[100px] lg:pt-0 pb-[80px] lg:pb-[200px] features-section px-4 md:px-8"
       style={{
         background: "rgb(0,91,196)",
         background:
           "linear-gradient(186deg, rgba(0,91,196,0) 52%, rgba(239,246,254,1) 100%)",
-        // clipPath: "polygon(0 0, 100% 0, 100% 80%, 0% 100%)",
       }}
     >
       <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 justify-center items-center container mx-auto px-4 md:px-8">
@@ -62,12 +61,12 @@ const Features = () => {
             <h4 className="text-[12px] md:text-[12px] lg:text-lg font-bold text-[#1F80F0] tracking-wider">
               POWERING THE FUTURE OF FINANCE
             </h4>
-            <h2 className="text-3xl lg:text-[56px] leading-tight font-bold text-[#164377]">
+            <h2 className="text-4xl lg:text-[56px] leading-tight font-bold text-[#164377]">
               Uncovering new
               <br className="hidden lg:inline" /> ways to delight customers
             </h2>
             {/* Image Section */}
-            <div className="md:hidden relative w-full h-full flex  mt-8 md:mt-0">
+            <div className="md:hidden relative w-full h-full flex md:mt-0">
               <div className="relative w-full h-full p-12 md:p-8 lg:p-28 rounded-3xl">
                 {/* Background Image Container */}
                 <div className="absolute top-[5%] right-[5%] w-[90%] h-[90%] background-image">
@@ -97,8 +96,14 @@ const Features = () => {
                   alt="features"
                   className="absolute w-[8vw] h-[8vw] md:w-[6vw] md:h-[6vw] lg:w-[73px] lg:h-[73px] report-icon"
                   style={{
-                    top: "clamp(25%, 32%, 35%)",
-                    left: "clamp(8%, 10%, 12%)",
+                    top:
+                      window.innerWidth >= 768 && window.innerWidth < 1024
+                        ? "32%"
+                        : "clamp(25%, 32%, 35%)",
+                    left:
+                      window.innerWidth >= 768 && window.innerWidth < 1024
+                        ? "10%"
+                        : "clamp(8%, 10%, 12%)",
                   }}
                 />
                 <img
@@ -106,8 +111,14 @@ const Features = () => {
                   alt="features"
                   className="absolute w-[10vw] h-[10vw] md:w-[8vw] md:h-[8vw] lg:w-[115px] lg:h-[115px] home-icon"
                   style={{
-                    top: "clamp(18%, 22%, 25%)",
-                    right: "clamp(6%, 8%, 10%)",
+                    top:
+                      window.innerWidth >= 768 && window.innerWidth < 1024
+                        ? "22%"
+                        : "clamp(18%, 22%, 25%)",
+                    right:
+                      window.innerWidth >= 768 && window.innerWidth < 1024
+                        ? "8%"
+                        : "clamp(6%, 8%, 10%)",
                   }}
                 />
                 <img
@@ -115,8 +126,14 @@ const Features = () => {
                   alt="features"
                   className="absolute w-[9vw] h-[9vw] md:w-[7vw] md:h-[7vw] lg:w-[86px] lg:h-[86px] chart-icon"
                   style={{
-                    top: "clamp(40%, 45%, 48%)",
-                    left: "clamp(18%, 22%, 25%)",
+                    top:
+                      window.innerWidth >= 768 && window.innerWidth < 1024
+                        ? "45%"
+                        : "clamp(40%, 45%, 48%)",
+                    left:
+                      window.innerWidth >= 768 && window.innerWidth < 1024
+                        ? "22%"
+                        : "clamp(18%, 22%, 25%)",
                   }}
                 />
               </div>
@@ -136,14 +153,14 @@ const Features = () => {
           </div>
         </div>
         {/* Image Section */}
-        <div className="hidden relative w-full h-full md:flex  mt-8 md:mt-0">
-          <div className="relative w-full h-full p-12 md:p-8 lg:p-28 rounded-3xl">
+        <div className="hidden relative w-full h-full md:flex mt-8 md:mt-0 p-8">
+          <div className="relative w-full h-full p-12 md:p-0 lg:p-28 rounded-3xl">
             {/* Background Image Container */}
-            <div className="absolute top-[5%] right-[5%] w-[90%] h-[90%] background-image">
+            <div className="absolute top-0 right-0 w-[110%] h-[90%]">
               <img
                 src="/features/bg.svg"
                 alt="background"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             {/* Overlay Image Container */}
@@ -166,8 +183,14 @@ const Features = () => {
               alt="features"
               className="absolute w-[8vw] h-[8vw] md:w-[6vw] md:h-[6vw] lg:w-[73px] lg:h-[73px] report-icon"
               style={{
-                top: "clamp(25%, 32%, 35%)",
-                left: "clamp(8%, 10%, 12%)",
+                top:
+                  window.innerWidth >= 768 && window.innerWidth < 1024
+                    ? "32%"
+                    : "clamp(25%, 32%, 35%)",
+                left:
+                  window.innerWidth >= 768 && window.innerWidth < 1024
+                    ? "-8%"
+                    : "clamp(8%, 10%, 12%)",
               }}
             />
             <img
@@ -175,8 +198,14 @@ const Features = () => {
               alt="features"
               className="absolute w-[10vw] h-[10vw] md:w-[8vw] md:h-[8vw] lg:w-[115px] lg:h-[115px] home-icon"
               style={{
-                top: "clamp(18%, 22%, 25%)",
-                right: "clamp(6%, 8%, 10%)",
+                top:
+                  window.innerWidth >= 768 && window.innerWidth < 1024
+                    ? "26%"
+                    : "clamp(18%, 22%, 25%)",
+                right:
+                  window.innerWidth >= 768 && window.innerWidth < 1024
+                    ? "-12%"
+                    : "clamp(6%, 8%, 10%)",
               }}
             />
             <img
@@ -184,8 +213,14 @@ const Features = () => {
               alt="features"
               className="absolute w-[9vw] h-[9vw] md:w-[7vw] md:h-[7vw] lg:w-[86px] lg:h-[86px] chart-icon"
               style={{
-                top: "clamp(40%, 45%, 48%)",
-                left: "clamp(18%, 22%, 25%)",
+                top:
+                  window.innerWidth >= 768 && window.innerWidth < 1024
+                    ? "45%"
+                    : "clamp(40%, 45%, 48%)",
+                left:
+                  window.innerWidth >= 768 && window.innerWidth < 1024
+                    ? "12%"
+                    : "clamp(18%, 22%, 25%)",
               }}
             />
           </div>

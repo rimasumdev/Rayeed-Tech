@@ -56,7 +56,7 @@ const Cta = () => {
         </div>
 
         {/* Dark Background */}
-        <div className="absolute inset-0 h-full lg:mix-blend-multiply parallax-bg">
+        <div className="absolute inset-0 h-full lg:mix-blend-multiply parallax-bg-reverse">
           <img
             src="/dark-patterns.png"
             alt="SVG Background"
