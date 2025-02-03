@@ -1,9 +1,23 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Features = () => {
+  const [isMediumScreen, setIsMediumScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      const width = window.innerWidth;
+      setIsMediumScreen(width >= 768 && width < 1024);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -96,14 +110,8 @@ const Features = () => {
                   alt="features"
                   className="absolute w-[8vw] h-[8vw] md:w-[6vw] md:h-[6vw] lg:w-[73px] lg:h-[73px] report-icon"
                   style={{
-                    top:
-                      window.innerWidth >= 768 && window.innerWidth < 1024
-                        ? "32%"
-                        : "clamp(25%, 32%, 35%)",
-                    left:
-                      window.innerWidth >= 768 && window.innerWidth < 1024
-                        ? "10%"
-                        : "clamp(8%, 10%, 12%)",
+                    top: isMediumScreen ? "32%" : "clamp(25%, 32%, 35%)",
+                    left: isMediumScreen ? "10%" : "clamp(8%, 10%, 12%)",
                   }}
                 />
                 <img
@@ -111,14 +119,8 @@ const Features = () => {
                   alt="features"
                   className="absolute w-[10vw] h-[10vw] md:w-[8vw] md:h-[8vw] lg:w-[115px] lg:h-[115px] home-icon"
                   style={{
-                    top:
-                      window.innerWidth >= 768 && window.innerWidth < 1024
-                        ? "22%"
-                        : "clamp(18%, 22%, 25%)",
-                    right:
-                      window.innerWidth >= 768 && window.innerWidth < 1024
-                        ? "8%"
-                        : "clamp(6%, 8%, 10%)",
+                    top: isMediumScreen ? "22%" : "clamp(18%, 22%, 25%)",
+                    right: isMediumScreen ? "8%" : "clamp(6%, 8%, 10%)",
                   }}
                 />
                 <img
@@ -126,14 +128,8 @@ const Features = () => {
                   alt="features"
                   className="absolute w-[9vw] h-[9vw] md:w-[7vw] md:h-[7vw] lg:w-[86px] lg:h-[86px] chart-icon"
                   style={{
-                    top:
-                      window.innerWidth >= 768 && window.innerWidth < 1024
-                        ? "45%"
-                        : "clamp(40%, 45%, 48%)",
-                    left:
-                      window.innerWidth >= 768 && window.innerWidth < 1024
-                        ? "22%"
-                        : "clamp(18%, 22%, 25%)",
+                    top: isMediumScreen ? "45%" : "clamp(40%, 45%, 48%)",
+                    left: isMediumScreen ? "22%" : "clamp(18%, 22%, 25%)",
                   }}
                 />
               </div>
@@ -183,14 +179,8 @@ const Features = () => {
               alt="features"
               className="absolute w-[8vw] h-[8vw] md:w-[6vw] md:h-[6vw] lg:w-[73px] lg:h-[73px] report-icon"
               style={{
-                top:
-                  window.innerWidth >= 768 && window.innerWidth < 1024
-                    ? "32%"
-                    : "clamp(25%, 32%, 35%)",
-                left:
-                  window.innerWidth >= 768 && window.innerWidth < 1024
-                    ? "-8%"
-                    : "clamp(8%, 10%, 12%)",
+                top: isMediumScreen ? "32%" : "clamp(25%, 32%, 35%)",
+                left: isMediumScreen ? "10%" : "clamp(8%, 10%, 12%)",
               }}
             />
             <img
@@ -198,14 +188,8 @@ const Features = () => {
               alt="features"
               className="absolute w-[10vw] h-[10vw] md:w-[8vw] md:h-[8vw] lg:w-[115px] lg:h-[115px] home-icon"
               style={{
-                top:
-                  window.innerWidth >= 768 && window.innerWidth < 1024
-                    ? "26%"
-                    : "clamp(18%, 22%, 25%)",
-                right:
-                  window.innerWidth >= 768 && window.innerWidth < 1024
-                    ? "-12%"
-                    : "clamp(6%, 8%, 10%)",
+                top: isMediumScreen ? "22%" : "clamp(18%, 22%, 25%)",
+                right: isMediumScreen ? "8%" : "clamp(6%, 8%, 10%)",
               }}
             />
             <img
@@ -213,14 +197,8 @@ const Features = () => {
               alt="features"
               className="absolute w-[9vw] h-[9vw] md:w-[7vw] md:h-[7vw] lg:w-[86px] lg:h-[86px] chart-icon"
               style={{
-                top:
-                  window.innerWidth >= 768 && window.innerWidth < 1024
-                    ? "45%"
-                    : "clamp(40%, 45%, 48%)",
-                left:
-                  window.innerWidth >= 768 && window.innerWidth < 1024
-                    ? "12%"
-                    : "clamp(18%, 22%, 25%)",
+                top: isMediumScreen ? "45%" : "clamp(40%, 45%, 48%)",
+                left: isMediumScreen ? "22%" : "clamp(18%, 22%, 25%)",
               }}
             />
           </div>
