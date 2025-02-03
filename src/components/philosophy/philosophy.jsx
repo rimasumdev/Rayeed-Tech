@@ -6,6 +6,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./philosophy.module.css";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 import Card from "./card";
 
@@ -40,6 +42,21 @@ const Philosophy = () => {
   ];
   useEffect(() => {
     setIsMobile(window.innerWidth < 768);
+    gsap.registerPlugin(ScrollTrigger);
+    const cards = document.querySelectorAll(".philosophy-card");
+
+    gsap.from(cards, {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.3,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".philosophy-cards-section",
+        start: "top center+=100",
+        // markers: true, // development এর সময় position চেক করার জন্য
+      },
+    });
   }, []);
   return (
     <div className="container mx-auto w-full h-auto pt-12 px-8 md:px-8 pb-24 space-y-16">
@@ -62,9 +79,11 @@ const Philosophy = () => {
         />
       </div>
       {/* Desktop View */}
-      <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-stretch h-full">
+      <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-stretch h-full philosophy-cards-section">
         {data.map((item, index) => (
-          <Card key={index} data={item} className="h-full" />
+          <div key={index} className="philosophy-card">
+            <Card data={item} className="h-full" />
+          </div>
         ))}
       </div>
 

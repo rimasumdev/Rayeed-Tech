@@ -6,6 +6,51 @@ import Heading from "./heading";
 import SVGComponent from "./bg-svg";
 const Hero = () => {
   useEffect(() => {
+    // Initial animation on page load
+    gsap.fromTo(
+      ".parallax-bg",
+      {
+        x: -100,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power3.out",
+        delay: 0.3,
+      }
+    );
+
+    gsap.fromTo(
+      ".dark-bg",
+      {
+        y: -100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power3.out",
+      }
+    );
+
+    gsap.fromTo(
+      ".parallax-bg-reverse",
+      {
+        x: 100,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power3.out",
+      }
+    );
+
+    // Mouse move animation
     const handleMouseMove = (e) => {
       const mouseX = e.clientX / window.innerWidth;
       const mouseY = e.clientY / window.innerHeight;
@@ -103,7 +148,7 @@ const Hero = () => {
         </div>
 
         {/* Dark Background */}
-        <div className="absolute inset-0 h-full lg:mix-blend-multiply parallax-bg">
+        <div className="absolute inset-0 h-full lg:mix-blend-multiply dark-bg parallax-bg">
           <img
             src="/background-dark.svg"
             alt="SVG Background"
