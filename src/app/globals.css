@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .sub-heading {
+    @apply text-[#1F80F0];
+  }
+  .features-section {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+  }
+  .cta-section {
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+  }
+  @media (min-width: 1024px) {
+    .hero-section {
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    }
+    .features-section {
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    }
+    .cta-section {
+      clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+    }
+  }
+}

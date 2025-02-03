@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "name": "Brand 1",
+    "image": "./FunFact/asset16.png"
+  },
+  {
+    "id": 2,
+    "name": "Brand 2",
+    "image": "./FunFact/asset17.png"
+  },
+  {
+    "id": 3,
+    "name": "Brand 3",
+    "image": "./FunFact/asset18.png"
+  },
+  {
+    "id": 4,
+    "name": "Brand 4",
+    "image": "./FunFact/asset19.png"
+  },
+  {
+    "id": 5,
+    "name": "Brand 5",
+    "image": "./FunFact/asset20.png"
+  },
+  {
+    "id": 6,
+    "name": "Brand 6",
+    "image": "./FunFact/asset21.png"
+  },
+  {
+    "id": 7,
+    "name": "Brand 7",
+    "image": "./FunFact/asset22.png"
+  },
+  {
+    "id": 8,
+    "name": "Brand 8",
+    "image": "./FunFact/asset23.png"
+  },
+  {
+    "id": 9,
+    "name": "Brand 9",
+    "image": "./FunFact/asset24.png"
+  },
+  {
+    "id": 10,
+    "name": "Brand 10",
+    "image": "./FunFact/asset25.png"
+  },
+  {
+    "id": 11,
+    "name": "Brand 11",
+    "image": "./FunFact/asset26.svg"
+  },
+  {
+    "id": 12,
+    "name": "Brand 12",
+    "image": "./FunFact/asset27.png"
+  },
+  {
+    "id": 13,
+    "name": "Brand 13",
+    "image": "./FunFact/asset28.png"
+  },
+  {
+    "id": 14,
+    "name": "Brand 14",
+    "image": "./FunFact/asset29.png"
+  },
+  {
+    "id": 15,
+    "name": "Brand 15",
+    "image": "./FunFact/asset30.png"
+  }
+]
